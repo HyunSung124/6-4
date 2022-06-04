@@ -1,0 +1,75 @@
+a = ["","","","","","","","","",""]
+import random
+def p(a):
+    print(a[1],"|",a[2],"|",a[3])
+    print("ㅡ","ㅡ","ㅡ")
+    print(a[4],"|",a[5],"|",a[6])
+    print("ㅡ","ㅡ","ㅡ")
+    print(a[7],"|",a[8],"|",a[9])
+p(a)
+count = 0
+while True:
+    while True:
+        x = int(input())
+        if a[x] == "":
+            a[x] = 'x'
+            break
+    count += 1
+    if a[1]==a[2]==a[3] == 'x':
+        print("WIN!")
+        break
+    elif a[4]==a[5]==a[6] == 'x':
+        print("WIN!")
+        break
+    elif a[7]==a[8]==a[9] == 'x':
+        print("WIN!")
+        break
+    elif a[1]==a[4]==a[7] == 'x':
+        print("WIN!")
+        break
+    elif a[2]==a[5]==a[8] == 'x':
+        print("WIN!")
+        break
+    elif a[3]==a[6]==a[9] == 'x':
+        print("WIN!")
+        break
+    elif a[1]==a[5]==a[9] == 'x':
+        print("WIN!")
+        break
+    elif a[3]==a[5]==a[7] == 'x':
+        print("WIN!")
+        break
+    elif count == 5:
+        print("DRAW")
+        break
+    p(a)
+    while True:
+        o = random.randrange(1,10)
+        if a[o] == "":
+            a[o] = 'o'
+            break
+    p(a)
+    if a[1]==a[2]==a[3] == 'o':
+        print("LOSE...")
+        break
+    if a[4]==a[5]==a[6] == 'o':
+        print("LOSE...")
+        break
+    if a[7]==a[8]==a[9] == 'o':
+        print("LOSE...")
+        break
+    if a[1]==a[4]==a[7] == 'o':
+        print("LOSE...")
+        break
+    if a[2]==a[5]==a[8] == 'o':
+        print("LOSE...")
+        break
+    if a[3]==a[6]==a[9] == 'o':
+        print("LOSE...")
+        break
+    if a[1]==a[5]==a[9] == 'o':
+        print("LOSE...")
+        break
+    if a[3]==a[5]==a[7] == 'o':
+        print("LOSE...")
+        break
